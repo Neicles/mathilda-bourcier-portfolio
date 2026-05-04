@@ -7,89 +7,101 @@ export default function Cover() {
         <h1 className="cover-title">PASSEPORT</h1>
 
         <div className="cover-emblem">
-          <svg viewBox="0 0 480 500" xmlns="http://www.w3.org/2000/svg" className="emblem-svg">
+          <svg viewBox="0 0 520 540" xmlns="http://www.w3.org/2000/svg" className="emblem-svg">
             <defs>
-              <path id="bottomArc" d="M 82,310 A 158,158 0 0,0 398,310" />
+              <path id="bottomArc" d="M 88,336 A 172,172 0 0,0 432,336" />
             </defs>
 
-            {/* Globe circle */}
-            <circle cx="240" cy="270" r="158" fill="none" stroke="white" strokeWidth="3" opacity="0.9" />
+            {/* Globe — partial circle (top is masked by airplane) */}
+            <circle cx="260" cy="295" r="172" fill="none" stroke="white" strokeWidth="3" opacity="0.88" />
 
-            {/* Continent shapes — lower portion of globe */}
+            {/* ── Continent shapes ── */}
+            {/* Main landmass — lower half */}
             <path
-              d="M 128,262 Q 132,238 145,230 Q 158,220 173,226
-                 Q 183,216 198,222 Q 210,216 224,223
-                 Q 236,216 250,223 Q 262,217 272,228
-                 Q 284,224 290,236 Q 298,240 295,254
-                 Q 302,262 294,274 Q 285,284 272,280
-                 Q 264,292 250,287 Q 238,297 220,291
-                 Q 206,300 188,293 Q 172,302 155,293
-                 Q 140,298 128,286 Q 118,276 128,262 Z"
-              fill="none" stroke="white" strokeWidth="2.2" opacity="0.65"
+              d="M 140,278
+                 Q 144,252 158,244 Q 173,234 190,241
+                 Q 200,230 216,236 Q 228,229 244,237
+                 Q 257,229 272,237 Q 284,232 294,244
+                 Q 308,240 316,254 Q 324,260 318,274
+                 Q 328,284 318,297 Q 308,310 293,305
+                 Q 284,318 268,313 Q 254,325 234,318
+                 Q 218,330 198,322 Q 180,332 162,322
+                 Q 145,328 135,314 Q 125,302 140,278 Z"
+              fill="none" stroke="white" strokeWidth="2.2" opacity="0.62"
             />
-            {/* Island / extra landmass top-right */}
+            {/* Island / NE landmass */}
             <path
-              d="M 272,220 Q 284,212 298,218 Q 314,224 310,238
-                 Q 316,250 304,256 Q 292,260 280,252 Q 268,244 272,232 Q 268,226 272,220 Z"
-              fill="none" stroke="white" strokeWidth="2" opacity="0.6"
+              d="M 295,235 Q 310,226 326,232 Q 344,240 340,256
+                 Q 348,268 334,276 Q 320,280 306,270
+                 Q 291,262 295,248 Q 289,241 295,235 Z"
+              fill="none" stroke="white" strokeWidth="2" opacity="0.58"
             />
-            {/* Peninsula south */}
+            {/* Small peninsula S */}
             <path
-              d="M 155,293 Q 158,308 163,318 Q 170,326 176,318 Q 172,304 165,290"
-              fill="none" stroke="white" strokeWidth="2" opacity="0.55"
+              d="M 162,322 Q 165,340 170,353 Q 178,364 185,354 Q 180,338 170,320"
+              fill="none" stroke="white" strokeWidth="2" fill="none" opacity="0.52"
             />
 
-            {/* ===== AIRPLANE ===== */}
-            {/* Drawn horizontal (nose right), then rotated -35° around its center */}
-            <g transform="translate(236, 222) rotate(-35)">
-              {/* Main fuselage */}
+            {/* ══════════════════════════════════════
+                AIRPLANE  (drawn in horizontal local space, then rotated)
+                nose → right (+x), top → up (−y)
+                ══════════════════════════════════════ */}
+            <g transform="translate(255,230) rotate(-36)">
+
+              {/* ── Fuselage body ── */}
               <path
-                d="M 128,0
-                   C 136,-7 136,-20 128,-26
-                   C 118,-30 105,-30 92,-24
-                   C 80,-36 65,-38 45,-34
-                   L -90,-24
-                   C -112,-20 -118,-12 -118,0
-                   C -118,12 -112,20 -90,24
-                   L 45,34
-                   C 65,38 80,36 92,24
-                   C 105,30 118,30 128,26
-                   C 136,20 136,7 128,0 Z"
+                d="M 150,0
+                   C 162,-10 164,-28 155,-34
+                   C 143,-40 126,-40 112,-32
+                   C 98,-44 80,-48 55,-42
+                   L -108,-30
+                   C -134,-26 -142,-14 -142,0
+                   C -142,14 -134,26 -108,30
+                   L 55,42
+                   C 80,48 98,44 112,32
+                   C 126,40 143,40 155,34
+                   C 164,28 162,10 150,0 Z"
                 fill="none" stroke="white" strokeWidth="3" strokeLinejoin="round"
               />
-              {/* Top main wing */}
+
+              {/* ── Cockpit window line ── */}
               <path
-                d="M 62,-24 L 32,-96 L 58,-96 L 84,-24 Z"
+                d="M 95,-32 Q 115,-48 138,-34"
+                fill="none" stroke="white" strokeWidth="2" opacity="0.75"
+              />
+
+              {/* ── Upper main wing ── */}
+              <path
+                d="M 68,-30 L 38,-118 L 66,-118 L 96,-30 Z"
                 fill="none" stroke="white" strokeWidth="2.8" strokeLinejoin="round"
               />
-              {/* Bottom main wing */}
+              {/* ── Lower main wing ── */}
               <path
-                d="M 62,24 L 32,96 L 58,96 L 84,24 Z"
+                d="M 68,30 L 38,118 L 66,118 L 96,30 Z"
                 fill="none" stroke="white" strokeWidth="2.8" strokeLinejoin="round"
               />
-              {/* Vertical tail fin */}
+
+              {/* ── Vertical tail fin ── */}
               <path
-                d="M -86,-24 L -96,-66 L -110,-66 L -118,-24"
+                d="M -102,-30 L -114,-78 L -130,-78 L -142,-30"
                 fill="none" stroke="white" strokeWidth="2.8" strokeLinejoin="round"
               />
-              {/* Top horizontal stabilizer */}
+              {/* ── Upper horizontal stabilizer ── */}
               <path
-                d="M -92,-24 L -104,-54 L -120,-54 L -118,-24"
+                d="M -108,-30 L -122,-62 L -140,-62 L -142,-30"
                 fill="none" stroke="white" strokeWidth="2.2" strokeLinejoin="round"
               />
-              {/* Bottom horizontal stabilizer */}
+              {/* ── Lower horizontal stabilizer ── */}
               <path
-                d="M -92,24 L -104,54 L -120,54 L -118,24"
+                d="M -108,30 L -122,62 L -140,62 L -142,30"
                 fill="none" stroke="white" strokeWidth="2.2" strokeLinejoin="round"
               />
             </g>
 
-            {/* CRÉATIF text along bottom of globe */}
-            <text fill="white" fontSize="18" letterSpacing="6" opacity="0.95">
-              <textPath href="#bottomArc" startOffset="18%">
-                <tspan fontFamily="Georgia, serif" fontStyle="normal">CR</tspan>
-                <tspan fontFamily="Georgia, serif" fontStyle="normal">É</tspan>
-                <tspan fontFamily="'Helvetica Neue', sans-serif" fontSize="16">ATIF</tspan>
+            {/* CRÉATIF text along bottom curve */}
+            <text fill="white" opacity="0.95">
+              <textPath href="#bottomArc" startOffset="17%">
+                <tspan fontSize="19" fontFamily="Georgia,serif" letterSpacing="5">CRÉATIF</tspan>
               </textPath>
             </text>
           </svg>
