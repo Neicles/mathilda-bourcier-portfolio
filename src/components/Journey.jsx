@@ -1,53 +1,87 @@
 import Reveal from './Reveal'
 
-/* Simplified SVG map outlines */
-function MapBordeaux() {
+/* ── Gironde (33) — avec l'estuaire en blanc ── */
+function MapGironde() {
   return (
-    <svg viewBox="0 0 140 160" className="map-svg">
+    <svg viewBox="0 0 200 240" className="map-svg">
+      {/* Corps principal */}
       <path
-        d="M 52,12 L 70,8 L 86,12 L 98,22 L 106,38 L 110,56 L 108,76
-           L 104,98 L 96,118 L 84,132 L 68,137 L 52,133 L 40,122
-           L 32,108 L 30,88 L 32,68 L 36,48 L 44,28 Z"
-        fill="var(--navy)" stroke="none"
+        d="M 50,6 L 68,3 L 84,4 L 100,9 L 114,17 L 126,29 L 136,44
+           L 143,60 L 149,78 L 154,97 L 158,117 L 158,136 L 153,154
+           L 145,169 L 135,182 L 122,193 L 107,200 L 90,204
+           L 72,203 L 56,197 L 43,187 L 32,174 L 22,159
+           L 15,142 L 10,124 L 8,105 L 8,86 L 10,67
+           L 14,50 L 19,35 L 26,22 L 35,12 L 44,7 Z"
+        fill="#1B2B5E"
       />
-      <text x="70" y="80" textAnchor="middle" fill="white" fontSize="11" fontFamily="serif" fontStyle="italic">Bordeaux</text>
+      {/* Estuaire de la Gironde (blanc) */}
+      <path
+        d="M 50,6 L 68,3 L 84,4 L 100,9 L 113,17
+           L 96,34 L 77,48 L 58,59 L 42,67
+           L 30,68 L 22,62 L 19,50 L 20,38
+           L 24,25 L 31,14 L 41,7 Z"
+        fill="white"
+      />
+      <text x="100" y="168" textAnchor="middle" fill="white" fontSize="13"
+        fontFamily="'Cormorant Garamond',Georgia,serif" fontStyle="italic">Bordeaux</text>
     </svg>
   )
 }
 
-function MapOleron() {
+/* ── Landes (40) — quasi-rectangulaire ── */
+function MapLandes() {
   return (
-    <svg viewBox="0 0 150 140" className="map-svg">
+    <svg viewBox="0 0 200 240" className="map-svg">
       <path
-        d="M 30,22 L 55,14 L 82,18 L 108,28 L 122,48 L 126,70
-           L 118,92 L 102,108 L 76,116 L 52,110 L 34,96
-           L 22,74 L 20,52 L 26,34 Z"
-        fill="var(--navy)" stroke="none"
+        d="M 18,14 L 48,7 L 88,4 L 126,8 L 158,18 L 172,34
+           L 179,54 L 182,78 L 181,104 L 178,130 L 172,154
+           L 162,175 L 148,192 L 130,204 L 108,211
+           L 85,212 L 63,207 L 44,196 L 28,180
+           L 15,161 L 6,139 L 2,115 L 2,90
+           L 4,66 L 8,44 L 13,26 Z"
+        fill="#1B2B5E"
       />
-      {/* Small island — Île d'Oléron */}
-      <ellipse cx="12" cy="72" rx="7" ry="16" fill="var(--navy)" opacity="0.7" transform="rotate(-15,12,72)"/>
-      <text x="75" y="70" textAnchor="middle" fill="white" fontSize="11" fontFamily="serif" fontStyle="italic">Île d'Oléron</text>
+      {/* Quelques crénelages sur la bordure est */}
+      <path
+        d="M 172,34 L 176,42 L 170,50 L 178,60 L 179,54 Z"
+        fill="#1B2B5E"
+      />
+      <path
+        d="M 178,130 L 183,138 L 176,148 L 172,154 Z"
+        fill="#1B2B5E"
+      />
+      <text x="100" y="118" textAnchor="middle" fill="white" fontSize="13"
+        fontFamily="'Cormorant Garamond',Georgia,serif" fontStyle="italic">Les Landes</text>
     </svg>
   )
 }
 
+/* ── Paris (75) — compact ── */
 function MapParis() {
   return (
-    <svg viewBox="0 0 150 130" className="map-svg">
+    <svg viewBox="0 0 200 240" className="map-svg">
       <path
-        d="M 48,18 L 68,10 L 94,12 L 116,24 L 126,46 L 124,70
-           L 112,88 L 88,96 L 62,94 L 42,80 L 34,58 L 38,34 Z"
-        fill="var(--navy)" stroke="none"
+        d="M 80,55 L 98,47 L 118,49 L 134,58 L 146,72
+           L 152,89 L 150,108 L 142,123 L 128,134
+           L 110,140 L 90,139 L 72,132 L 57,120
+           L 48,104 L 47,85 L 54,68 L 66,57 Z"
+        fill="#1B2B5E"
       />
-      <text x="80" y="58" textAnchor="middle" fill="white" fontSize="12" fontFamily="serif" fontStyle="italic">Paris</text>
+      {/* Petites irrégularités pour le réalisme */}
+      <path d="M 134,58 L 140,62 L 146,72 Z" fill="#1B2B5E" />
+      <path d="M 150,108 L 155,114 L 150,120 L 142,123 Z" fill="#1B2B5E" />
+      <path d="M 48,104 L 43,110 L 47,118 L 57,120 Z" fill="#1B2B5E" />
+      <path d="M 54,68 L 48,72 L 47,80 L 54,76 Z" fill="#1B2B5E" />
+      <text x="130" y="100" textAnchor="middle" fill="white" fontSize="13"
+        fontFamily="'Cormorant Garamond',Georgia,serif" fontStyle="italic">Paris</text>
     </svg>
   )
 }
 
 const CARDS = [
-  { label: 'Bordeaux',     rotation: '-3deg',  Map: MapBordeaux, caption: 'Ma ville' },
-  { label: "Île d'Oléron", rotation: '1.5deg', Map: MapOleron,   caption: 'Festival' },
-  { label: 'Paris',        rotation: '-1deg',  Map: MapParis,    caption: 'Mes ambitions' },
+  { label: 'Bordeaux',   rotation: '-3deg',   Map: MapGironde, caption: 'Ma ville' },
+  { label: 'Les Landes', rotation: '1.5deg',  Map: MapLandes,  caption: 'Mes racines' },
+  { label: 'Paris',      rotation: '-1deg',   Map: MapParis,   caption: 'Mes ambitions' },
 ]
 
 export default function Journey() {
@@ -62,7 +96,7 @@ export default function Journey() {
             <div className="polaroid-img">
               <Map />
             </div>
-            <p className="polaroid-caption">{caption}</p>
+            <div className="polaroid-footer">{caption}</div>
           </div>
         ))}
       </div>
