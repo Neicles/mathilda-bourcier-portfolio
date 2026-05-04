@@ -320,6 +320,7 @@ body {
 }
 .trust-card:hover { transform: translateY(-5px); box-shadow: 0 10px 28px rgba(0,0,0,.16); }
 .client-logo-svg { width: 100%; height: 100%; }
+.client-logo-img { width: 100%; height: 100%; object-fit: contain; padding: .5rem; }
 
 /* ============================================================ REVEAL ANIMATION */
 .fade-up { opacity: 0; transform: translateY(24px); transition: opacity .65s ease, transform .65s ease; }
