@@ -5,7 +5,15 @@
       "Bash(git --version)",
       "Bash(git init *)",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(npx vercel *)",
+      "Bash(npm install *)",
+      "Read(//c/Users/doria/AppData/Local/com.vercel.cli/**)",
+      "Read(//c/Users/doria/AppData/Roaming/com.vercel.cli/**)",
+      "Bash(curl -s -X DELETE 'https://api.vercel.com/v9/projects/prj_JR6P4n5b3HgXhLdC4rkiZydlZExd?teamId=team_4IYPIU9Op7oAnwKcQG2BwIRw' -H 'Authorization: Bearer vca_2pUpweHNAMGAYmYgGspW2uGMP4VNFSefX0xIpwrns7iQoLOB052PG21C')",
+      "Bash(git push *)",
+      "Bash(Get-ChildItem -Recurse \"c:\\\\Users\\\\doria\\\\OneDrive\\\\Bureau\\\\epsi\\\\master\\\\couple\" -Include \"*.png\",\"*.jpg\",\"*.jpeg\",\"*.webp\",\"*.svg\")",
+      "Bash(Select-Object FullName)"
     ]
   }
 }
