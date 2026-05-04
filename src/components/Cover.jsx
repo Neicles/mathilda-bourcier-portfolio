@@ -39,7 +39,7 @@ export default function Cover() {
             {/* Small peninsula S */}
             <path
               d="M 162,322 Q 165,340 170,353 Q 178,364 185,354 Q 180,338 170,320"
-              fill="none" stroke="white" strokeWidth="2" fill="none" opacity="0.52"
+              fill="none" stroke="white" strokeWidth="2" opacity="0.52"
             />
 
             {/* ══════════════════════════════════════
