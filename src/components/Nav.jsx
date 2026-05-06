@@ -1,35 +1,30 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 const links = [
-  { href: '#identity', label: 'Identité' },
-  { href: '#objectives', label: 'Visa' },
-  { href: '#projects', label: 'Projets' },
-  { href: '#why-me', label: 'Autorisation' },
-  { href: '#contact', label: 'Contact', cta: true },
+  { page: 'voyage',  label: 'Mon voyage'  },
+  { page: 'galerie', label: 'Ma galerie'  },
+  { page: 'agence',  label: "L'agence"    },
 ]
 
-export default function Nav() {
+export default function Nav({ page, setPage }) {
   const [open, setOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  const navigate = (p) => { setPage(p); setOpen(false) }
 
   return (
-    <nav className={`passport-nav${scrolled ? ' scrolled' : ''}`}>
-      <div className="nav-logo">
-        <span className="logo-mb">
-          M<span className="logo-b">B</span>
-        </span>
+    <nav className="passport-nav">
+      <div className="nav-logo" onClick={() => navigate('agence')} style={{ cursor: 'pointer' }}>
+        <span className="logo-mb">M<span className="logo-b">B</span></span>
       </div>
 
       <ul className={`nav-links${open ? ' open' : ''}`}>
-        {links.map(({ href, label, cta }) => (
-          <li key={href}>
-            <a href={href} className={cta ? 'nav-cta' : ''} onClick={() => setOpen(false)}>
+        {links.map(({ page: p, label }) => (
+          <li key={p}>
+            <a
+              href="#"
+              className={page === p ? 'nav-active' : ''}
+              onClick={(e) => { e.preventDefault(); navigate(p) }}
+            >
               {label}
             </a>
           </li>
