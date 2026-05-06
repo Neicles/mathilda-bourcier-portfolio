@@ -94,8 +94,8 @@ html, body {
 }
 .cover-airline-label { font-size: clamp(.65rem, 1.2vh, .85rem); letter-spacing: .35em; color: rgba(255,255,255,.5); text-transform: uppercase; }
 .cover-title { font-family: var(--serif); font-size: clamp(3.2rem, 9vw, 7rem); font-weight: 400; letter-spacing: .22em; line-height: 1; }
-.emblem-svg { width: clamp(130px, 28vh, 260px); height: clamp(130px, 28vh, 260px); filter: drop-shadow(0 4px 20px rgba(0,0,0,.3)) brightness(1.4); }
-.emblem-img { width: clamp(130px, 28vh, 260px); height: clamp(130px, 28vh, 260px); object-fit: contain; filter: drop-shadow(0 4px 20px rgba(0,0,0,.3)) brightness(1.4); }
+.emblem-svg { width: clamp(110px, 22vh, 200px); height: clamp(110px, 22vh, 200px); filter: drop-shadow(0 4px 20px rgba(0,0,0,.3)) brightness(1.4); }
+.emblem-img { width: clamp(110px, 22vh, 200px); height: clamp(110px, 22vh, 200px); object-fit: contain; filter: drop-shadow(0 4px 20px rgba(0,0,0,.3)) brightness(1.4); }
 .cover-brand { display: flex; align-items: center; gap: .8rem; margin-top: .3rem; }
 .cover-brand-monogram { font-family: var(--serif); font-size: 2.4rem; font-weight: 700; color: white; line-height: 1; }
 .monogram-b { display: inline-block; font-size: 1.4rem; transform: translateY(6px); }
@@ -435,10 +435,15 @@ html, body {
   .passport-body { grid-template-columns: 1fr; }
   .pp-signature { display: none; }
   .pp-field-row { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
-  .passport-nav { padding: .8rem 1.2rem; }
+  :root { --nav-h: 52px; }
+
+  /* NAV */
+  .passport-nav { padding: .7rem 1.2rem; }
   .nav-links {
     display: none; position: absolute; top: 100%; left: 0; right: 0;
     background: rgba(15,27,61,.97); flex-direction: column;
@@ -446,17 +451,51 @@ html, body {
   }
   .nav-links.open { display: flex; }
   .nav-toggle { display: block; }
-  .stamps-grid { grid-template-columns: repeat(2, 120px); gap: 3rem 1.5rem; }
-  .escale { grid-template-columns: 1fr; }
+
+  /* COVER */
+  .cover-content { gap: .15rem; padding: 1rem 1.2rem; }
+  .cover-tagline { font-size: clamp(1.6rem, 7vw, 2.4rem); margin-top: .2rem; }
+  .cover-description { font-size: .83rem; line-height: 1.55; margin-top: 1rem; }
+  .cover-info-strip { flex-direction: column; align-items: center; }
+
+  /* GALLERY */
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: .6rem; }
+  .gallery-img { height: 120px; }
+  .section-gallery { padding: 4.5rem 1rem 1.5rem; }
+
+  /* OBJECTIVES */
+  .section-objectives { padding: 4.5rem 1rem 3rem; }
+  .visa-cards { padding: 0 .2rem; }
+
+  /* SKILLS */
+  .section-skills { padding: 3rem 1rem 4rem; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .skills-extras { grid-template-columns: 1fr 1fr; }
+
+  /* PROJECTS */
+  .section-projects { padding: 4.5rem 1rem 3rem; }
+  .escale { grid-template-columns: 1fr; gap: 1rem; }
+  .escale-with-img { grid-template-columns: 1fr; }
+  .escale-with-img.escale-flip { grid-template-columns: 1fr; }
+  .escale-with-img.escale-flip .escale-text { order: 2; }
+  .escale-with-img.escale-flip .escale-badge { order: 1; }
+  .escale-with-img.escale-flip .escale-photo-wrap { order: 3; }
+  .escale-photo-wrap { width: 100%; height: 140px; }
   .escale-flip { grid-template-columns: 1fr; }
   .escale-flip .escale-text  { order: 2; }
   .escale-flip .escale-badge { order: 1; }
-  .cover-content { padding-top: 4rem; gap: 1rem; }
-  .cover-tagline { font-size: clamp(2rem, 8vw, 3rem); }
-  .cover-info-strip { flex-direction: column; align-items: center; }
+
+  /* STAMPS */
+  .stamps-grid { grid-template-columns: repeat(2, 120px); gap: 3rem 1.5rem; }
+
+  /* TRUST */
+  .section-trust { padding: 3rem 1rem; }
+  .trust-logos { gap: 1.2rem; }
 }
 
 @media (max-width: 400px) {
   .stamps-grid { grid-template-columns: repeat(2, 100px); }
   .stamp { width: 95px; height: 95px; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .skills-extras { grid-template-columns: 1fr; }
 }
