@@ -223,10 +223,18 @@ html, body {
   display: grid; grid-template-columns: 140px 1fr; gap: 1.8rem; align-items: center;
   background: white; border-radius: 3px; padding: 1.5rem; box-shadow: var(--shadow); transition: transform .3s ease;
 }
+.escale-with-img { grid-template-columns: 130px 130px 1fr; }
+.escale-with-img.escale-flip { grid-template-columns: 1fr 130px 130px; }
+.escale-with-img.escale-flip .escale-text  { order: 1; }
+.escale-with-img.escale-flip .escale-badge { order: 2; }
+.escale-with-img.escale-flip .escale-photo-wrap { order: 3; }
 .escale:hover { transform: translateX(5px); }
 .escale-flip { grid-template-columns: 1fr 140px; }
 .escale-flip .escale-text  { order: 1; }
 .escale-flip .escale-badge { order: 2; }
+.escale-photo-wrap { width: 120px; height: 110px; flex-shrink: 0; border-radius: 4px; overflow: hidden; }
+.escale-photo { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .35s ease; }
+.escale:hover .escale-photo { transform: scale(1.06); }
 
 .escale-badge {
   width: 115px; height: 115px; border-radius: 50%; border: 3px solid;

@@ -1,57 +1,47 @@
 import Reveal from './Reveal'
 
+const BASE = '/images/carnet de voyage/'
+
 const ETAPE1 = [
   {
-    color: 'blue',
-    emoji: '🐟',
-    label: 'OLÉRON COMEDY',
-    title: 'ESCALE 1 :',
-    subtitle: 'Junior Agence 2022',
+    color: 'blue',  emoji: '🐟', label: 'OLÉRON COMEDY',
+    title: 'ESCALE 1 :', subtitle: 'Junior Agence 2022',
+    img: BASE + 'orleon.png',
     text: "Notre mission : réaliser un festival d'humour à Saint-Denis-d'Oléron sur une journée. Budget de 30 000 €. Nous avons dû concevoir l'événement dans son intégralité : programmation artistique, gestion logistique, communication et recherche de partenaires.",
   },
   {
-    color: 'navy',
-    emoji: '❤️',
-    label: 'RONALD McDONALD',
-    title: 'ESCALE 2 :',
-    subtitle: 'Junior Agence 2023',
+    color: 'navy',  emoji: '❤️', label: 'RONALD McDONALD',
+    title: 'ESCALE 2 :', subtitle: 'Junior Agence 2023',
+    img: BASE + 'escale2.jpg',
     text: "Nous avons créé une course connectée et une vidéo pour la Fondation Ronald McDonald. Budget de 100 € pour concevoir le concept de l'événement, élaborer la stratégie de communication et assurer la production de la vidéo.",
     flip: true,
   },
   {
-    color: 'teal',
-    emoji: '🔬',
-    label: 'CAP SCIENCES',
-    title: 'ESCALE 3 :',
-    subtitle: 'Junior Agence 2024',
+    color: 'teal',  emoji: '🔬', label: 'CAP SCIENCES',
+    title: 'ESCALE 3 :', subtitle: 'Junior Agence 2024',
+    img: BASE + 'capscience.jpg',
     text: "Nous avons accompagné Cap Sciences pour le lancement de sa branche événementielle. L'objectif : concevoir une soirée pour 150 professionnels, avec une thématique forte valorisant les engagements RSE du client.",
   },
 ]
 
 const ETAPE2 = [
   {
-    color: 'purple',
-    emoji: '✨',
-    label: "L'AUTRE MONDE",
-    title: 'ESCALE 4 :',
-    subtitle: 'Magazine',
+    color: 'purple', emoji: '✨', label: "L'AUTRE MONDE",
+    title: 'ESCALE 4 :', subtitle: 'Magazine',
+    img: BASE + "l'autreMonde.jpg",
     text: "J'ai piloté la création d'un magazine de 80 pages, de la ligne éditoriale à la mise en page, incluant 20 % d'espaces publicitaires. Cette expérience a consolidé mes compétences en stratégie de contenu, coordination éditoriale et travail d'équipe.",
     flip: true,
   },
   {
-    color: 'pink',
-    emoji: '☕',
-    label: 'COQUINE',
-    title: 'ESCALE 5 :',
-    subtitle: 'Pop up store',
+    color: 'pink',   emoji: '☕', label: 'COQUINE',
+    title: 'ESCALE 5 :', subtitle: 'Pop up store',
+    img: BASE + 'coquine.jpg',
     text: 'Nous avons conçu un pop-up store dédié à un salon de thé dans un univers "pop-rock". Offre variée : gamme de produits gourmands et vente de produits dérivés (bougies et affiches).',
   },
   {
-    color: 'gold',
-    emoji: '🥂',
-    label: "BACK TO THE 20'S",
-    title: 'ESCALE 6 :',
-    subtitle: 'Gala',
+    color: 'gold',   emoji: '🥂', label: "BACK TO THE 20'S",
+    title: 'ESCALE 6 :', subtitle: 'Gala',
+    img: BASE + 'backto20.webp',
     text: "Projet de fin d'études : organisation du gala de A à Z en trois mois. En tant que responsable de la scénographie, j'ai imaginé et conçu toute l'identité visuelle et l'ambiance de l'événement.",
     flip: true,
   },
@@ -60,14 +50,12 @@ const ETAPE2 = [
 function FlightLine({ flip }) {
   return (
     <div className={`flight-line${flip ? ' flip' : ''}`}>
-      {flip
-        ? '──────────────────── ✈'
-        : '✈ ────────────────────'}
+      {flip ? '──────────────────── ✈' : '✈ ────────────────────'}
     </div>
   )
 }
 
-function Escale({ color, emoji, label, title, subtitle, text, flip }) {
+function Escale({ color, emoji, label, title, subtitle, text, img, flip }) {
   const badge = (
     <div className={`escale-badge badge-${color}`}>
       <span className="badge-emoji">{emoji}</span>
@@ -80,9 +68,17 @@ function Escale({ color, emoji, label, title, subtitle, text, flip }) {
       <p>{text}</p>
     </div>
   )
+  const photo = img ? (
+    <div className="escale-photo-wrap">
+      <img src={img} alt={label} className="escale-photo" />
+    </div>
+  ) : null
+
   return (
-    <Reveal tag="div" className={`escale${flip ? ' escale-flip' : ''}`}>
-      {flip ? <>{content}{badge}</> : <>{badge}{content}</>}
+    <Reveal tag="div" className={`escale escale-with-img${flip ? ' escale-flip' : ''}`}>
+      {flip
+        ? <>{content}{badge}{photo}</>
+        : <>{photo}{badge}{content}</>}
     </Reveal>
   )
 }
