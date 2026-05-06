@@ -436,7 +436,7 @@ html, body {
   .section-cover { height: 100vh; min-height: 100vh; overflow: hidden; align-items: flex-start; }
   .cover-content {
     margin-top: 0;
-    padding: calc(var(--nav-h) + .8rem) 1.2rem 2rem;
+    padding: calc(var(--nav-h) + 2.2rem) 1.2rem 2rem;
     min-height: auto; justify-content: flex-start; gap: .7rem;
   }
   .emblem-img, .emblem-svg { width: 100px; height: 100px; }
