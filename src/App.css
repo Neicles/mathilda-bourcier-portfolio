@@ -433,10 +433,19 @@ html, body {
   .nav-toggle { display: block; }
 
   /* COVER */
-  .section-cover { height: auto; min-height: 100vh; overflow: visible; }
-  .cover-content { margin-top: var(--nav-h); gap: .4rem; padding: 1rem 1.2rem; }
-  .cover-tagline { font-size: clamp(1.6rem, 7vw, 2.4rem); margin-top: .4rem; }
-  .cover-description { font-size: .83rem; line-height: 1.55; margin-top: 1rem; }
+  .section-cover {
+    height: auto; min-height: 100svh; min-height: 100dvh;
+    overflow: visible; display: block;
+  }
+  .cover-content {
+    margin-top: 0;
+    min-height: calc(100svh - var(--nav-h));
+    min-height: calc(100dvh - var(--nav-h));
+    padding: calc(var(--nav-h) + 1.2rem) 1.2rem 2rem;
+    gap: .5rem; justify-content: center;
+  }
+  .cover-tagline { font-size: clamp(1.6rem, 7vw, 2.4rem); margin-top: .3rem; }
+  .cover-description { font-size: .83rem; line-height: 1.55; margin-top: .8rem; }
   .cover-info-strip { flex-direction: column; align-items: center; }
 
   /* GALLERY */
