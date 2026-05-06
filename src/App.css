@@ -444,6 +444,7 @@ html, body {
     padding: calc(var(--nav-h) + 1.2rem) 1.2rem 2rem;
     gap: .5rem; justify-content: center;
   }
+  .emblem-img, .emblem-svg { width: 80px; height: 80px; }
   .cover-tagline { font-size: clamp(1.6rem, 7vw, 2.4rem); margin-top: .3rem; }
   .cover-description { font-size: .83rem; line-height: 1.55; margin-top: .8rem; }
   .cover-info-strip { flex-direction: column; align-items: center; }
