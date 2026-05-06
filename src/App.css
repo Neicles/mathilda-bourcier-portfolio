@@ -213,6 +213,7 @@ html, body {
 .visa-card h3 { font-family: var(--cormorant); font-size: 1.55rem; font-weight: 400; color: var(--navy); margin: .3rem 0 .8rem; }
 .vc-divider { height: 1px; background: var(--cream-dk); margin-bottom: .9rem; }
 .visa-card p { color: var(--text-md); line-height: 1.75; font-size: .93rem; }
+.voyage-etape-label { font-family: var(--serif); font-size: .8rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--navy); opacity: .5; padding: .5rem 0 .2rem; }
 
 /* ============================================================ SKILLS */
 .section-skills { padding: 6rem 2rem 7rem; background: var(--cream-lt); display: flex; flex-direction: column; align-items: center; gap: 3rem; }
