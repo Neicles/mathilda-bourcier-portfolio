@@ -433,11 +433,11 @@ html, body {
   .nav-toggle { display: block; }
 
   /* COVER */
-  .section-cover { height: auto; overflow: visible; align-items: flex-start; }
+  .section-cover { height: 100vh; min-height: 100vh; overflow: hidden; align-items: flex-start; }
   .cover-content {
-    margin-top: var(--nav-h);
-    padding: 1.8rem 1.2rem 2.5rem;
-    min-height: auto; justify-content: flex-start; gap: .8rem;
+    margin-top: 0;
+    padding: calc(var(--nav-h) + .8rem) 1.2rem 2rem;
+    min-height: auto; justify-content: flex-start; gap: .7rem;
   }
   .emblem-img, .emblem-svg { width: 100px; height: 100px; }
   .cover-tagline { font-size: clamp(1.6rem, 7vw, 2.4rem); margin-top: .3rem; }
