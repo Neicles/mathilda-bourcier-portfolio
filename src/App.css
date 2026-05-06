@@ -433,8 +433,9 @@ html, body {
   .nav-toggle { display: block; }
 
   /* COVER */
-  .cover-content { gap: .15rem; padding: 1rem 1.2rem; }
-  .cover-tagline { font-size: clamp(1.6rem, 7vw, 2.4rem); margin-top: .2rem; }
+  .section-cover { height: auto; min-height: 100vh; overflow: visible; }
+  .cover-content { height: auto; gap: .4rem; padding: 5rem 1.2rem 2.5rem; justify-content: flex-start; }
+  .cover-tagline { font-size: clamp(1.6rem, 7vw, 2.4rem); margin-top: .4rem; }
   .cover-description { font-size: .83rem; line-height: 1.55; margin-top: 1rem; }
   .cover-info-strip { flex-direction: column; align-items: center; }
 
