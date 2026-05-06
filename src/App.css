@@ -384,13 +384,40 @@ html, body {
   position: relative; overflow: hidden;
   border-radius: 6px; cursor: pointer;
   box-shadow: var(--shadow);
+  background: var(--cream-lt);
 }
 .gallery-img {
-  width: 100%; height: 150px;
-  object-fit: cover; display: block;
+  width: 100%; height: 130px;
+  object-fit: contain; display: block;
   transition: transform .4s ease;
+  padding: .3rem;
 }
-.gallery-item:hover .gallery-img { transform: scale(1.07); }
+.gallery-item:hover .gallery-img { transform: scale(1.04); }
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed; inset: 0; z-index: 9000;
+  background: rgba(10,18,45,.92);
+  display: flex; align-items: center; justify-content: center;
+  padding: 1rem;
+}
+.lightbox-close {
+  position: absolute; top: 1rem; right: 1.2rem;
+  background: none; border: none; color: white;
+  font-size: 1.8rem; cursor: pointer; line-height: 1;
+}
+.lightbox-inner {
+  display: flex; flex-direction: column; align-items: center; gap: 1rem;
+  max-width: 90vw; max-height: 90vh;
+}
+.lightbox-img {
+  max-width: 100%; max-height: 75vh;
+  object-fit: contain; border-radius: 6px;
+  box-shadow: 0 8px 48px rgba(0,0,0,.5);
+}
+.lightbox-info { text-align: center; }
+.lightbox-title { color: white; font-family: var(--serif); font-size: 1.1rem; }
+.lightbox-cat { color: var(--gold-lt); font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
 .gallery-overlay {
   position: absolute; inset: 0;
   background: rgba(15, 27, 61, 0.85);
