@@ -14,7 +14,7 @@ export default function Gallery() {
   return (
     <section className="section-gallery">
       <div className="gallery-header">
-        <h2 className="gallery-title">Ma Galerie</h2>
+        <h2 className="gallery-title">Ma Gallerie</h2>
         <p className="gallery-sub">Passez la souris sur une image pour en savoir plus</p>
       </div>
       <div className="gallery-grid">

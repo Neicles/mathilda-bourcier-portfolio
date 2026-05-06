@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 const links = [
   { page: 'voyage',  label: 'Mon voyage'  },
-  { page: 'galerie', label: 'Ma galerie'  },
+  { page: 'galerie', label: 'Ma Gallerie' },
   { page: 'agence',  label: "L'agence"    },
 ]
 
@@ -13,7 +13,7 @@ export default function Nav({ page, setPage }) {
 
   return (
     <nav className="passport-nav">
-      <div className="nav-logo" onClick={() => navigate('agence')} style={{ cursor: 'pointer' }}>
+      <div className="nav-logo" onClick={() => navigate('accueil')} style={{ cursor: 'pointer' }}>
         <span className="logo-mb">M<span className="logo-b">B</span></span>
       </div>
 
