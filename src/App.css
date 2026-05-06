@@ -37,7 +37,8 @@ html, body {
 
 /* ============================================================ PAGE ROUTING */
 .main-paged { height: 100vh; overflow: hidden; }
-.page-slot  { display: none; height: 100vh; overflow-y: scroll; -webkit-overflow-scrolling: touch; }
+.page-slot  { display: none; height: 100vh; overflow-y: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.page-slot::-webkit-scrollbar { display: none; }
 .page-slot.active { display: block; }
 .nav-active { color: var(--gold) !important; }
 
