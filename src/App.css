@@ -433,18 +433,13 @@ html, body {
   .nav-toggle { display: block; }
 
   /* COVER */
-  .section-cover {
-    height: auto; min-height: 100svh; min-height: 100dvh;
-    overflow: visible; display: block;
-  }
+  .section-cover { height: auto; overflow: visible; align-items: flex-start; }
   .cover-content {
-    margin-top: 0;
-    min-height: calc(100svh - var(--nav-h));
-    min-height: calc(100dvh - var(--nav-h));
-    padding: calc(var(--nav-h) + 1.2rem) 1.2rem 2rem;
-    gap: .5rem; justify-content: center;
+    margin-top: var(--nav-h);
+    padding: 1.8rem 1.2rem 2.5rem;
+    min-height: auto; justify-content: flex-start; gap: .8rem;
   }
-  .emblem-img, .emblem-svg { width: 80px; height: 80px; }
+  .emblem-img, .emblem-svg { width: 100px; height: 100px; }
   .cover-tagline { font-size: clamp(1.6rem, 7vw, 2.4rem); margin-top: .3rem; }
   .cover-description { font-size: .83rem; line-height: 1.55; margin-top: .8rem; }
   .cover-info-strip { flex-direction: column; align-items: center; }
