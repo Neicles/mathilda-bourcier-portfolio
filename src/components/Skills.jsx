@@ -47,7 +47,6 @@ export default function Skills() {
   return (
     <section className="section-skills">
       <Reveal className="skills-intro">
-        <div className="skills-stamp">COMPÉTENCES</div>
         <h2 className="skills-heading">MES ATOUTS</h2>
       </Reveal>
 

@@ -21,10 +21,15 @@ const VISAS = [
 export default function Objectives() {
   return (
     <section id="objectives" className="section-objectives">
-      <Reveal className="visa-intro">
-        <div className="working-tag">WORKING</div>
-        <h2 className="visa-heading">VISA</h2>
-        <p className="visa-sub"><em>Mes objectifs de voyage</em></p>
+      <Reveal className="visa-intro-row">
+        <div className="visa-intro-text">
+          <div className="working-tag">WORKING</div>
+          <h2 className="visa-heading">VISA</h2>
+          <p className="visa-sub"><em>Mes objectifs de voyage</em></p>
+        </div>
+        <div className="visa-photo-wrap">
+          <img src="/images/WhatsApp Image 2026-05-07 at 00.19.22.jpeg" alt="Mathilda Bourcier" className="visa-photo" />
+        </div>
       </Reveal>
 
       <div className="visa-cards">
