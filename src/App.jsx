@@ -14,7 +14,7 @@ export default function App() {
     <>
       <Nav page={page} setPage={setPage} />
       <main className="main-paged">
-        <div className={`page-slot${page === 'accueil' ? ' active' : ''}`}><Cover /></div>
+        <div className={`page-slot page-slot--cover${page === 'accueil' ? ' active' : ''}`}><Cover /></div>
         <div className={`page-slot${page === 'agence'  ? ' active' : ''}`}>
           <Objectives />
           <Skills />

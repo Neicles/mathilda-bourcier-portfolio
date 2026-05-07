@@ -40,6 +40,7 @@ html, body {
 .page-slot  { display: none; height: 100vh; height: 100dvh; overflow-y: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .page-slot::-webkit-scrollbar { display: none; }
 .page-slot.active { display: block; }
+.page-slot--cover { overflow: hidden; }
 .nav-active { color: var(--gold) !important; }
 
 /* ============================================================ NAV */
