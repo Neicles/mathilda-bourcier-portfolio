@@ -19,7 +19,7 @@ export default function Gallery() {
     <section className="section-gallery">
       <div className="gallery-header">
         <div className="working-tag">MA</div>
-        <h2 className="visa-heading">GALERIE</h2>
+        <h2 className="visa-heading">GALLERIE</h2>
         <p className="visa-sub"><em>Cliquez sur une image pour l'agrandir</em></p>
       </div>
 

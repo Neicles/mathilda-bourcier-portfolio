@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 const links = [
   { page: 'voyage',  label: 'Mon voyage'  },
-  { page: 'galerie', label: 'Ma Galerie'  },
+  { page: 'galerie', label: 'Ma Gallerie' },
   { page: 'agence',  label: "L'agence"    },
   { page: 'contact', label: 'Contact'     },
 ]
