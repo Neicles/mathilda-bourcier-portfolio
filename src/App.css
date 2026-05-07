@@ -35,8 +35,27 @@ html, body {
   line-height: 1.6;
 }
 
+@media (hover: hover) {
+  *, *::before, *::after { cursor: none !important; }
+}
+
+.custom-cursor {
+  position: fixed; top: 0; left: 0; z-index: 99999;
+  pointer-events: none; user-select: none;
+  font-size: 1.3rem;
+  color: var(--gold);
+  opacity: 0;
+  transition: opacity .2s ease;
+  filter: drop-shadow(0 1px 6px rgba(0,0,0,.4));
+  margin: -10px 0 0 -6px;
+}
+.custom-cursor--visible { opacity: 1; }
+
+@media (hover: none) { .custom-cursor { display: none; } }
+
 /* ============================================================ PAGE ROUTING */
-.main-paged { height: 100vh; height: 100dvh; overflow: hidden; }
+.main-paged { height: 100vh; height: 100dvh; overflow: hidden; transition: opacity .25s ease; }
+.main-paged.page-fading { opacity: 0; }
 .page-slot  { display: none; height: 100vh; height: 100dvh; overflow-y: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .page-slot::-webkit-scrollbar { display: none; }
 .page-slot.active { display: block; }
@@ -456,6 +475,100 @@ html, body {
   color: var(--gold-lt); font-size: .78rem;
   margin-top: .5rem; letter-spacing: .08em;
   text-transform: uppercase;
+}
+
+/* ============================================================ LOADER */
+.loader-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--navy-dark);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 3rem;
+  transition: opacity .5s ease;
+}
+.loader-overlay--out { opacity: 0; pointer-events: none; }
+
+/* AVION */
+.loader-track {
+  position: absolute; left: 0; right: 0; top: calc(50% - 100px);
+  height: 20px; pointer-events: none; z-index: 0;
+}
+.loader-plane-wrap {
+  position: absolute; top: 0; left: -8%;
+  transition: left 1800ms cubic-bezier(.4,0,.2,1);
+}
+.loader-plane-wrap--go { left: 106%; }
+
+.loader-plane {
+  font-size: 1.6rem; color: var(--gold);
+  filter: drop-shadow(0 0 10px rgba(197,168,75,.7));
+  display: block;
+}
+.loader-plane--go {
+  animation: planeOscillate .55s ease-in-out infinite;
+}
+@keyframes planeOscillate {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+.loader-dotted {
+  position: absolute; left: 0; top: 50%;
+  height: 0; width: 0;
+  border-bottom: 2px dashed rgba(197,168,75,.3);
+  transition: width 1800ms cubic-bezier(.4,0,.2,1);
+}
+.loader-dotted--grow { width: 100%; }
+
+/* TABLEAU */
+.loader-board {
+  display: flex; flex-direction: column; align-items: center; gap: 1.2rem;
+  padding: 2rem 2.5rem;
+  border: 1px solid rgba(197,168,75,.2);
+  background: var(--navy-dark);
+  border-radius: 2px;
+  position: relative; z-index: 5;
+  transition: box-shadow .25s ease, border-color .25s ease;
+}
+.loader-board--flash {
+  border-color: rgba(197,168,75,.8);
+  box-shadow: 0 0 40px rgba(197,168,75,.5), 0 0 80px rgba(197,168,75,.2);
+}
+.loader-board-label {
+  font-family: var(--sans); font-size: .58rem;
+  letter-spacing: .35em; text-transform: uppercase;
+  color: rgba(197,168,75,.5);
+}
+.loader-rows { display: flex; flex-direction: column; gap: 5px; }
+.loader-flaps { display: flex; gap: 4px; }
+.loader-flap {
+  width: 44px; height: 60px; background: #111827;
+  border: 1px solid rgba(255,255,255,.07);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 1.9rem; font-weight: 700;
+  color: var(--gold-lt); position: relative; overflow: hidden;
+  border-radius: 2px;
+}
+.loader-flap::after {
+  content: ''; position: absolute; left: 0; right: 0; top: 50%;
+  height: 1px; background: rgba(0,0,0,.55); z-index: 1;
+}
+.loader-flap span { position: relative; z-index: 2; }
+.loader-flap--settled { color: white; background: #1e293b; }
+.loader-board-sub {
+  font-family: var(--sans); font-size: .52rem;
+  letter-spacing: .18em; color: rgba(197,168,75,.3);
+}
+.loader-confirmed {
+  font-family: var(--sans); font-size: .62rem; font-weight: 700;
+  letter-spacing: .2em; color: #4ade80;
+  border: 2px solid #4ade80; padding: .3rem 1rem; border-radius: 2px;
+  animation: stampIn .3s cubic-bezier(.17,.67,.3,1.4) forwards;
+  transform-origin: center;
+}
+@keyframes stampIn {
+  0%   { opacity: 0; transform: scale(2.2) rotate(-6deg); }
+  70%  { opacity: 1; transform: scale(.95) rotate(1deg); }
+  100% { opacity: 1; transform: scale(1) rotate(-2deg); }
 }
 
 /* ============================================================ REVEAL ANIMATION */

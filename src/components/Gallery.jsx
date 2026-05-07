@@ -18,8 +18,9 @@ export default function Gallery() {
   return (
     <section className="section-gallery">
       <div className="gallery-header">
-        <h2 className="gallery-title">Ma Gallerie</h2>
-        <p className="gallery-sub">Cliquez sur une image pour l'agrandir</p>
+        <div className="working-tag">MA</div>
+        <h2 className="visa-heading">GALERIE</h2>
+        <p className="visa-sub"><em>Cliquez sur une image pour l'agrandir</em></p>
       </div>
 
       <div className="gallery-grid">

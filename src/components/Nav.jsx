@@ -2,8 +2,9 @@ import { useState } from 'react'
 
 const links = [
   { page: 'voyage',  label: 'Mon voyage'  },
-  { page: 'galerie', label: 'Ma Gallerie' },
+  { page: 'galerie', label: 'Ma Galerie'  },
   { page: 'agence',  label: "L'agence"    },
+  { page: 'contact', label: 'Contact'     },
 ]
 
 export default function Nav({ page, setPage }) {
