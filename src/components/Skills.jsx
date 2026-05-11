@@ -2,7 +2,6 @@ import Reveal from './Reveal'
 
 const CATS = [
   {
-    icon: '📋',
     title: 'Gestion événementielle',
     items: [
       'Gestion de projet',
@@ -14,7 +13,6 @@ const CATS = [
     ],
   },
   {
-    icon: '✏️',
     title: 'Communication & Création',
     items: [
       'Conception de concepts événementiels',
@@ -23,7 +21,6 @@ const CATS = [
     ],
   },
   {
-    icon: '💻',
     title: 'Logiciels',
     items: [
       'Suite Adobe (InDesign, Illustrator, Photoshop)',
@@ -51,11 +48,10 @@ export default function Skills() {
       </Reveal>
 
       <div className="skills-grid">
-        {CATS.map(({ icon, title, items }, i) => (
+        {CATS.map(({ title, items }, i) => (
           <Reveal key={title} delay={i * 0.08}>
             <div className="skill-card">
               <div className="skill-card-header">
-                <span className="skill-icon">{icon}</span>
                 <h3>{title}</h3>
               </div>
               <ul className="skill-list">

@@ -29,15 +29,17 @@ export default function App() {
       <Loader />
       <Nav page={page} setPage={navigate} />
       <main className={`main-paged${fading ? ' page-fading' : ''}`}>
-        <div className={`page-slot page-slot--cover${page === 'accueil' ? ' active' : ''}`}><Cover /></div>
+        <div className={`page-slot page-slot--cover${page === 'accueil' ? ' active' : ''}`}>
+          <Cover />
+          <Experiences />
+        </div>
         <div className={`page-slot${page === 'agence'   ? ' active' : ''}`}>
           <Objectives />
           <Skills />
           <Trust />
         </div>
         <div className={`page-slot${page === 'galerie'  ? ' active' : ''}`}><Gallery /></div>
-        <div className={`page-slot${page === 'voyage'      ? ' active' : ''}`}><Projects /></div>
-        <div className={`page-slot${page === 'experiences' ? ' active' : ''}`}><Experiences /></div>
+        <div className={`page-slot${page === 'voyage' ? ' active' : ''}`}><Projects /></div>
       </main>
     </>
   )
