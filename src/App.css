@@ -260,7 +260,7 @@ html, body {
   color: var(--text-lt); letter-spacing: .04em; text-align: center;
 }
 .section-exp-cities {
-  background: var(--cream-lt);
+  background: var(--cream);
   padding: 2.5rem 2rem 5rem;
   display: flex; flex-direction: column; align-items: center; gap: 2.8rem;
 }
@@ -315,7 +315,7 @@ html, body {
 }
 .softskills-checklist li {
   display: flex; align-items: flex-start; gap: .9rem;
-  font-size: .8rem; color: var(--text-md); line-height: 1.5;
+  font-size: .88rem; color: var(--text-md); line-height: 1.5;
   font-weight: 600;
 }
 .softskills-checklist li::before {
