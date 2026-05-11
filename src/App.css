@@ -509,6 +509,7 @@ html, body {
 /* ============================================================ TRUST */
 /* CTA CONTACT */
 .section-trust.section-trust--cta { padding: 2.5rem 2rem 2.8rem; gap: 1rem; }
+.section-trust--cta .trust-title { color: var(--gold-lt); }
 
 .cta-contact {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
