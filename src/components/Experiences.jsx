@@ -99,18 +99,14 @@ export default function Experiences() {
           <h2 className="visa-heading">ATOUTS</h2>
           <p className="visa-sub"><em>personnels</em></p>
         </div>
-        <div className="visa-cards">
-          {[
-            { n: '01', text: "Grande capacité d'adaptation" },
-            { n: '02', text: "Autonome et organisée" },
-            { n: '03', text: "Gestion du stress et forte de proposition" },
-            { n: '04', text: "Curieuse, j'analyse les enjeux et participe activement aux prises de décision" },
-          ].map(({ n, text }) => (
-            <div className="visa-card" key={n}>
-              <div className="vc-number">{n}.</div>
-              <h3><em>{text}</em></h3>
-            </div>
-          ))}
+        <div className="softskills-layout">
+          <img src="/logo/mathilda.png" alt="Mathilda Bourcier" className="softskills-photo" />
+          <ul className="softskills-checklist">
+            <li>Grande capacité d'adaptation</li>
+            <li>Autonome et organisée</li>
+            <li>Gestion du stress et forte de proposition</li>
+            <li>Curieuse, j'analyse les enjeux et participe activement aux prises de décision</li>
+          </ul>
         </div>
       </section>
 
