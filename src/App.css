@@ -252,6 +252,52 @@ html, body {
 .sig-box { border: 1px solid var(--text-lt); border-radius: 3px; width: 105px; height: 70px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
 .sig-box svg { width: 95px; height: 60px; }
 
+/* ============================================================ EXPERIENCES */
+.section-experiences { padding: 7rem 2rem 6rem; background: var(--cream); display: flex; flex-direction: column; align-items: center; gap: 2.5rem; }
+
+.exp-cities { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; }
+.exp-city-card {
+  position: relative; width: 200px; height: 130px;
+  border-radius: 6px; overflow: hidden; cursor: pointer;
+  border: 3px solid transparent;
+  transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+  background: none;
+}
+.exp-city-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.exp-city-card--active { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold-dk), var(--shadow-lg); }
+.exp-city-img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(.75); transition: filter .25s ease; }
+.exp-city-card--active .exp-city-img, .exp-city-card:hover .exp-city-img { filter: brightness(.9); }
+.exp-city-name {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: .5rem .8rem;
+  font-family: var(--serif); font-size: 1.15rem; font-weight: 700;
+  color: white; letter-spacing: .08em;
+  background: linear-gradient(transparent, rgba(0,0,0,.6));
+}
+
+.exp-list { display: flex; flex-direction: column; gap: 1.5rem; max-width: 780px; width: 100%; }
+.exp-card {
+  background: white; border-radius: 3px;
+  box-shadow: var(--shadow); border-left: 5px solid var(--gold);
+  padding: 1.6rem 2rem;
+}
+.exp-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: .9rem; flex-wrap: wrap; }
+.exp-role { font-family: var(--cormorant); font-size: 1.35rem; color: var(--navy); font-weight: 600; }
+.exp-role em { font-weight: 400; font-style: italic; }
+.exp-type { font-size: .8rem; color: var(--text-lt); margin-top: .2rem; letter-spacing: .03em; }
+.exp-period { font-size: .78rem; color: var(--gold-dk); font-weight: 700; letter-spacing: .06em; white-space: nowrap; }
+.exp-tasks { list-style: none; display: flex; flex-direction: column; gap: .55rem; }
+.exp-tasks li { font-size: .92rem; color: var(--text-md); line-height: 1.7; padding-left: 1.1rem; position: relative; }
+.exp-tasks li::before { content: '–'; position: absolute; left: 0; color: var(--gold); }
+
+@media (max-width: 640px) {
+  .section-experiences { padding: 4rem 1rem 3rem; gap: 2rem; }
+  .exp-city-card { width: 100px; height: 75px; }
+  .exp-city-name { font-size: .85rem; }
+  .exp-card { padding: 1.2rem; }
+  .exp-card-header { flex-direction: column; gap: .4rem; }
+}
+
 /* ============================================================ OBJECTIVES */
 .section-objectives { padding: 7rem 2rem 6rem; background: var(--cream); display: flex; flex-direction: column; align-items: center; gap: 3rem; }
 .visa-intro { text-align: center; }

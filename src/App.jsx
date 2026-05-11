@@ -8,6 +8,7 @@ import Skills from './components/Skills'
 import Trust from './components/Trust'
 import Gallery from './components/Gallery'
 import Projects from './components/Projects'
+import Experiences from './components/Experiences'
 
 export default function App() {
   const [page, setPage] = useState('accueil')
@@ -35,7 +36,8 @@ export default function App() {
           <Trust />
         </div>
         <div className={`page-slot${page === 'galerie'  ? ' active' : ''}`}><Gallery /></div>
-        <div className={`page-slot${page === 'voyage'   ? ' active' : ''}`}><Projects /></div>
+        <div className={`page-slot${page === 'voyage'      ? ' active' : ''}`}><Projects /></div>
+        <div className={`page-slot${page === 'experiences' ? ' active' : ''}`}><Experiences /></div>
       </main>
     </>
   )
