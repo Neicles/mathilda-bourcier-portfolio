@@ -2,7 +2,7 @@ import Reveal from './Reveal'
 
 const CATS = [
   {
-    title: 'Gestion événementielle',
+    title: 'Compétences',
     items: [
       'Gestion de projet',
       'Coordination événementielle',
