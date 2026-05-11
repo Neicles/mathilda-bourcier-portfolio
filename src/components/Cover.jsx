@@ -43,6 +43,13 @@ export default function Cover() {
           </div>
         </div>
 
+        <div className="cover-contact">
+          <a href="mailto:mathilda.bourcier7@gmail.com" className="cover-contact-link">✉ mathilda.bourcier7@gmail.com</a>
+          <span className="cover-contact-sep">·</span>
+          <a href="tel:+33782892010" className="cover-contact-link">📞 07 82 89 20 10</a>
+          <span className="cover-contact-sep">·</span>
+          <a href="https://www.linkedin.com/in/mathilda-bourcier-a22818224/" target="_blank" rel="noopener noreferrer" className="cover-contact-link">in Mathilda BOURCIER</a>
+        </div>
 
       </div>
     </section>

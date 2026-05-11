@@ -54,10 +54,9 @@ html, body {
 @media (hover: none) { .custom-cursor { display: none; } }
 
 /* ============================================================ PAGE ROUTING */
-:root { --contact-bar-h: 36px; }
 .main-paged { height: 100vh; height: 100dvh; overflow: hidden; transition: opacity .25s ease; }
 .main-paged.page-fading { opacity: 0; }
-.page-slot  { display: none; height: 100vh; height: 100dvh; overflow-y: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: var(--contact-bar-h); }
+.page-slot  { display: none; height: 100vh; height: 100dvh; overflow-y: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .page-slot::-webkit-scrollbar { display: none; }
 .page-slot.active { display: block; }
 .page-slot--cover { overflow: hidden; }
