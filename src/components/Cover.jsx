@@ -43,6 +43,11 @@ export default function Cover() {
           </div>
         </div>
 
+        <div className="cover-scroll-hint">
+          <span>DÉCOUVRIR</span>
+          <div className="scroll-chevron" />
+        </div>
+
       </div>
     </section>
   )
