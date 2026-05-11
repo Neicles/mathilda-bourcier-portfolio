@@ -133,8 +133,8 @@ html, body {
 .cover-airline-label { font-size: clamp(.65rem, 1.2vh, .85rem); letter-spacing: .35em; color: rgba(255,255,255,.5); text-transform: uppercase; }
 .cover-title { font-family: var(--serif); font-size: clamp(3.2rem, 9vw, 7rem); font-weight: 400; letter-spacing: .22em; line-height: 1; }
 .emblem-svg { width: clamp(110px, 22vh, 200px); height: clamp(110px, 22vh, 200px); filter: drop-shadow(0 4px 20px rgba(0,0,0,.3)) brightness(1.4); }
-.cover-emblem { margin-bottom: -6rem; }
-.emblem-img { width: clamp(260px, 42vh, 380px); height: clamp(260px, 42vh, 380px); object-fit: contain; filter: drop-shadow(0 4px 20px rgba(0,0,0,.3)) brightness(1.4); }
+.cover-emblem { }
+.emblem-img { width: clamp(110px, 22vh, 200px); height: clamp(110px, 22vh, 200px); object-fit: contain; filter: drop-shadow(0 4px 20px rgba(0,0,0,.3)) brightness(1.4); }
 .cover-brand { display: flex; align-items: center; gap: .8rem; margin-top: .3rem; }
 .cover-brand-monogram { font-family: var(--serif); font-size: 2.4rem; font-weight: 700; color: white; line-height: 1; }
 .monogram-b { display: inline-block; font-size: 1.4rem; transform: translateY(6px); }
