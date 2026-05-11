@@ -255,6 +255,10 @@ html, body {
 .sig-box svg { width: 95px; height: 60px; }
 
 /* ============================================================ EXPERIENCES */
+.exp-cities-label {
+  font-family: var(--cormorant); font-style: italic; font-size: 1.15rem;
+  color: var(--text-lt); letter-spacing: .04em; text-align: center;
+}
 .section-exp-cities {
   background: var(--cream-lt);
   padding: 2.5rem 2rem 5rem;
@@ -294,14 +298,14 @@ html, body {
   max-width: 780px; width: 100%;
 }
 .softskills-right {
-  display: flex; flex-direction: column; flex: 1; height: 280px;
+  display: flex; flex-direction: column; flex: 1; height: 200px;
 }
 .softskills-whyme {
   font-family: var(--cormorant); font-style: italic;
   font-size: clamp(2.5rem, 5vw, 4rem); color: var(--navy); line-height: 1;
 }
 .softskills-photo {
-  width: 280px; height: 280px; object-fit: cover; object-position: center top;
+  width: 200px; height: 200px; object-fit: cover; object-position: center top;
   border-radius: 4px; flex-shrink: 0;
   box-shadow: var(--shadow-lg);
 }
@@ -311,7 +315,7 @@ html, body {
 }
 .softskills-checklist li {
   display: flex; align-items: flex-start; gap: .9rem;
-  font-size: 1.2rem; color: var(--text-md); line-height: 1.5;
+  font-size: .92rem; color: var(--text-md); line-height: 1.5;
   font-weight: 600;
 }
 .softskills-checklist li::before {

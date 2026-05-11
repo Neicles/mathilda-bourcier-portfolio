@@ -92,11 +92,7 @@ export default function Experiences() {
       </section>
 
       <section className="section-exp-cities">
-        <div className="visa-intro">
-          <div className="working-tag">MES</div>
-          <h2 className="visa-heading">EXPÉRIENCES</h2>
-          <p className="visa-sub"><em>professionnelles</em></p>
-        </div>
+        <p className="exp-cities-label">Mes expériences professionnelles</p>
         <div className="exp-cities-row">
           {CITIES.map(c => (
             <button key={c.id} className="exp-city-btn" onClick={() => setOpen(c.id)}>
