@@ -27,6 +27,13 @@ export default function App() {
       <Cursor />
       <Loader />
       <Nav page={page} setPage={navigate} />
+      <footer className="contact-bar">
+        <a href="mailto:mathilda.bourcier7@gmail.com" className="contact-bar-link">✉ mathilda.bourcier7@gmail.com</a>
+        <span className="contact-bar-sep">·</span>
+        <a href="tel:+33782892010" className="contact-bar-link">📞 07 82 89 20 10</a>
+        <span className="contact-bar-sep">·</span>
+        <a href="https://www.linkedin.com/in/mathilda-bourcier-a22818224/" target="_blank" rel="noopener noreferrer" className="contact-bar-link">in Mathilda BOURCIER</a>
+      </footer>
       <main className={`main-paged${fading ? ' page-fading' : ''}`}>
         <div className={`page-slot page-slot--cover${page === 'accueil' ? ' active' : ''}`}><Cover /></div>
         <div className={`page-slot${page === 'agence'   ? ' active' : ''}`}>

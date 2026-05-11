@@ -54,13 +54,32 @@ html, body {
 @media (hover: none) { .custom-cursor { display: none; } }
 
 /* ============================================================ PAGE ROUTING */
+:root { --contact-bar-h: 36px; }
 .main-paged { height: 100vh; height: 100dvh; overflow: hidden; transition: opacity .25s ease; }
 .main-paged.page-fading { opacity: 0; }
-.page-slot  { display: none; height: 100vh; height: 100dvh; overflow-y: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.page-slot  { display: none; height: 100vh; height: 100dvh; overflow-y: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: var(--contact-bar-h); }
 .page-slot::-webkit-scrollbar { display: none; }
 .page-slot.active { display: block; }
 .page-slot--cover { overflow: hidden; }
 .nav-active { color: var(--gold) !important; }
+
+/* ============================================================ CONTACT BAR */
+.contact-bar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 900;
+  display: flex; align-items: center; justify-content: center;
+  flex-wrap: wrap; gap: .4rem 1.2rem;
+  padding: .55rem 2rem;
+  background: rgba(15,27,61,.96);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(197,168,75,.2);
+}
+.contact-bar-link {
+  color: rgba(255,255,255,.55); font-size: .72rem;
+  letter-spacing: .06em; text-decoration: none;
+  transition: color .25s ease;
+}
+.contact-bar-link:hover { color: var(--gold-lt); }
+.contact-bar-sep { color: rgba(255,255,255,.2); font-size: .72rem; }
 
 /* ============================================================ NAV */
 .passport-nav {
