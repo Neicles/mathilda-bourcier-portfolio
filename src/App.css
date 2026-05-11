@@ -111,10 +111,9 @@ html, body {
 
 /* ============================================================ COVER */
 .section-cover {
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy) 60%, #243F80 100%);
   display: flex; align-items: center; justify-content: center;
-  padding-top: var(--nav-h); box-sizing: border-box;
   position: relative; overflow: hidden;
 }
 .cover-noise {
@@ -127,6 +126,7 @@ html, body {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: clamp(.05rem, 0.3vh, .2rem);
   text-align: center; color: white;
+  margin-top: var(--nav-h);
   padding: 1rem 2rem;
   max-width: 820px; width: 100%;
 }
@@ -879,7 +879,7 @@ html, body {
   .nav-toggle { display: block; }
 
   /* COVER */
-  .section-cover { height: 100vh; min-height: 100vh; overflow: hidden; align-items: flex-start; }
+  .section-cover { min-height: 100vh; overflow: hidden; align-items: flex-start; }
   .cover-content {
     margin-top: 0;
     padding: calc(var(--nav-h) + 4rem) 1.2rem 2rem;
