@@ -293,9 +293,13 @@ html, body {
   max-width: 780px; width: 100%;
 }
 .softskills-photo {
-  width: 210px; height: 270px; object-fit: cover;
+  width: 280px; height: 360px; object-fit: cover;
   border-radius: 4px; flex-shrink: 0;
   box-shadow: var(--shadow-lg);
+}
+.softskills-whyme {
+  font-family: var(--cormorant); font-style: italic;
+  font-size: 2rem; color: var(--navy); margin-bottom: .5rem;
 }
 .softskills-checklist {
   list-style: none; display: flex; flex-direction: column; gap: 1.2rem; flex: 1;
@@ -311,7 +315,7 @@ html, body {
 }
 @media (max-width: 640px) {
   .softskills-layout { flex-direction: column; gap: 2rem; }
-  .softskills-photo { width: 160px; height: 200px; }
+  .softskills-photo { width: 200px; height: 260px; }
 }
 
 

@@ -101,6 +101,7 @@ export default function Experiences() {
         </div>
         <div className="softskills-layout">
           <img src="/logo/mathilda.png" alt="Mathilda Bourcier" className="softskills-photo" />
+          <div className="softskills-whyme">Why me&nbsp;?</div>
           <ul className="softskills-checklist">
             <li>Grande capacité d'adaptation</li>
             <li>Autonome et organisée</li>
