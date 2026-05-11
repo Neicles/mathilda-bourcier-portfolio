@@ -315,7 +315,7 @@ html, body {
 }
 .softskills-checklist li {
   display: flex; align-items: flex-start; gap: .9rem;
-  font-size: .92rem; color: var(--text-md); line-height: 1.5;
+  font-size: .8rem; color: var(--text-md); line-height: 1.5;
   font-weight: 600;
 }
 .softskills-checklist li::before {
