@@ -133,7 +133,7 @@ html, body {
 .cover-airline-label { font-size: clamp(.65rem, 1.2vh, .85rem); letter-spacing: .35em; color: rgba(255,255,255,.5); text-transform: uppercase; }
 .cover-title { font-family: var(--serif); font-size: clamp(3.2rem, 9vw, 7rem); font-weight: 400; letter-spacing: .22em; line-height: 1; }
 .emblem-svg { width: clamp(110px, 22vh, 200px); height: clamp(110px, 22vh, 200px); filter: drop-shadow(0 4px 20px rgba(0,0,0,.3)) brightness(1.4); }
-.cover-emblem { margin-bottom: -6rem; margin-top: -2rem; }
+.cover-emblem { margin-bottom: -1rem; margin-top: -2rem; }
 .emblem-img { width: clamp(260px, 42vh, 380px); height: clamp(260px, 42vh, 380px); object-fit: contain; filter: drop-shadow(0 4px 20px rgba(0,0,0,.3)) brightness(1.4); }
 .cover-brand { display: flex; align-items: center; gap: .8rem; margin-top: .3rem; }
 .cover-brand-monogram { font-family: var(--serif); font-size: 2.4rem; font-weight: 700; color: white; line-height: 1; }
@@ -888,6 +888,7 @@ html, body {
   .section-softskills { padding: 4rem 1rem 3.5rem; gap: 2rem; }
   .section-softskills .visa-card { min-width: 140px; max-width: 100%; flex: 1 1 calc(50% - .5rem); }
   .emblem-img, .emblem-svg { width: 100px; height: 100px; }
+  .cover-emblem { margin-bottom: 0; margin-top: 0; }
   .cover-tagline { font-size: clamp(1.6rem, 7vw, 2.4rem); margin-top: .3rem; }
   .cover-description { font-size: .83rem; line-height: 1.55; margin-top: .8rem; }
   .cover-info-strip { flex-direction: column; align-items: center; }
