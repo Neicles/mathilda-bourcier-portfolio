@@ -4,7 +4,6 @@ const links = [
   { page: 'voyage',  label: 'Mon voyage'  },
   { page: 'galerie', label: 'Ma Gallerie' },
   { page: 'agence',  label: "L'agence"    },
-  { page: 'contact', label: 'Contact'     },
 ]
 
 export default function Nav({ page, setPage }) {

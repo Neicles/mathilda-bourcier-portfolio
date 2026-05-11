@@ -144,6 +144,19 @@ html, body {
 }
 .cover-info-badge strong { color: var(--gold-lt); font-weight: 700; }
 .info-icon { font-size: .9rem; }
+.cover-contact {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: .5rem 1rem; margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+.cover-contact-link {
+  color: rgba(255,255,255,.55); font-size: .75rem;
+  letter-spacing: .06em; text-decoration: none;
+  transition: color .25s ease;
+}
+.cover-contact-link:hover { color: var(--gold-lt); }
+.cover-contact-sep { color: rgba(255,255,255,.2); font-size: .75rem; }
 .cover-scroll-hint {
   display: flex; flex-direction: column; align-items: center; gap: .4rem;
   margin-top: 1.5rem; color: rgba(255,255,255,.45); font-size: .7rem; letter-spacing: .12em;

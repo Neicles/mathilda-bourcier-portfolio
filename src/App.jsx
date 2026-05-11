@@ -8,7 +8,6 @@ import Skills from './components/Skills'
 import Trust from './components/Trust'
 import Gallery from './components/Gallery'
 import Projects from './components/Projects'
-import Contact from './components/Contact'
 
 export default function App() {
   const [page, setPage] = useState('accueil')
@@ -37,7 +36,6 @@ export default function App() {
         </div>
         <div className={`page-slot${page === 'galerie'  ? ' active' : ''}`}><Gallery /></div>
         <div className={`page-slot${page === 'voyage'   ? ' active' : ''}`}><Projects /></div>
-        <div className={`page-slot${page === 'contact'  ? ' active' : ''}`}><Contact /></div>
       </main>
     </>
   )
