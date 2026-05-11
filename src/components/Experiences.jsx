@@ -97,17 +97,18 @@ export default function Experiences() {
         <div className="visa-intro">
           <div className="working-tag">MES</div>
           <h2 className="visa-heading">ATOUTS</h2>
-          <p className="visa-sub"><em>personnels</em></p>
+          <p className="visa-sub"><em>Why me&nbsp;?</em></p>
         </div>
         <div className="softskills-layout">
           <img src="/logo/mathilda.png" alt="Mathilda Bourcier" className="softskills-photo" />
-          <div className="softskills-whyme">Why me&nbsp;?</div>
-          <ul className="softskills-checklist">
-            <li>Grande capacité d'adaptation</li>
-            <li>Autonome et organisée</li>
-            <li>Gestion du stress et forte de proposition</li>
-            <li>Curieuse, j'analyse les enjeux et participe activement aux prises de décision</li>
-          </ul>
+          <div className="softskills-right">
+            <ul className="softskills-checklist">
+              <li>Grande capacité d'adaptation</li>
+              <li>Autonome et organisée</li>
+              <li>Gestion du stress et forte de proposition</li>
+              <li>Curieuse, j'analyse les enjeux et participe activement aux prises de décision</li>
+            </ul>
+          </div>
         </div>
       </section>
 
