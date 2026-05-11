@@ -39,7 +39,7 @@ export default function Cover() {
           </div>
           <div className="cover-info-badge">
             <span className="info-icon">🕐</span>
-            Ouvert tous les jours <strong>8h–17h</strong> sauf les lundis
+            Ouvert tous les jours sauf les lundis
           </div>
         </div>
 
